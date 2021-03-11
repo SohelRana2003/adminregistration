@@ -17,5 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//Admin Login Backend Route
+Route::get('/admin', 'AdminController@Index')->name('adminbackend');
+
 //Admin Login Route
-Route::get('/admin-login', 'AdminController@Index')->name('adminlogin');
+Route::post('/admin-login', 'AdminController@Adminlogin')->name('adminlogin');
+Route::get('/admin-dashboard', 'AdminController@Admindashboard')->name('admindashboard');

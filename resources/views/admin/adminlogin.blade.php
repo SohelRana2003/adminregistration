@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Material Design for Bootstrap</title>
+    <title>Android BD Admin Login System</title>
+    <!-- Favicon icon -->
+    <link rel="icon" href="{{ asset('assets\images\favicon.ico') }}" type="image/x-icon">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
     <!-- Google Fonts Roboto -->
@@ -39,7 +41,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-block" style="z-index: 2000;">
       <div class="container-fluid">
         <!-- Navbar brand -->
-        <a class="navbar-brand nav-link" target="_blank" href="#">
+        <a class="navbar-brand nav-link" href="{{ url('/')}}">
           <strong>Android DB</strong>
         </a>
         <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01"
@@ -49,7 +51,7 @@
         <div class="collapse navbar-collapse" id="navbarExample01">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item active">
-              <a class="nav-link" aria-current="page" href="#intro">Home</a>
+              <a class="nav-link" aria-current="page" href="{{ url('/')}}">Home</a>
             </li>
           </ul>
 
@@ -73,16 +75,26 @@
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-xl-5 col-md-8">
-              <form class="bg-white rounded shadow-5-strong p-5">
+                <p class="alert-danger">
+                    <?php
+                        $exception = Session::get('exception');
+                        if ($exception) {
+                            echo $exception;
+                            Session::put('exception', null);
+                        }
+                    ?>
+                </p>
+              <form method="POST" action="{{ route('adminlogin')}}" class="bg-white rounded shadow-5-strong p-5">
+                @csrf
                 <!-- Email input -->
                 <div class="form-outline mb-4">
-                  <input type="email" id="form1Example1" class="form-control" />
+                  <input name="email" type="email" id="form1Example1" class="form-control" />
                   <label class="form-label" for="form1Example1">Email address</label>
                 </div>
 
                 <!-- Password input -->
                 <div class="form-outline mb-4">
-                  <input type="password" id="form1Example2" class="form-control" />
+                  <input name="password" type="password" id="form1Example2" class="form-control" />
                   <label class="form-label" for="form1Example2">Password</label>
                 </div>
 

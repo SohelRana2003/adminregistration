@@ -1,0 +1,15 @@
+body{
+	background-color: pink;
+	color: black;
+	font-weight: bolder;
+	font-size: 20px;
+	margin-left: 2rem;
+}
+#button{
+	background-color: black;
+	color: #fff;
+	padding: 10px;
+	font-size: 18px;
+	display: block;
+	width: 100%;
+}

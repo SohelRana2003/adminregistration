@@ -1,0 +1,197 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #fff;
+  color: #181818;
+  height: 100vh;
+}
+
+.dropdown-menu {
+  width: 200px !important;
+  padding-left: 5px !important;
+  /*.theme-switcher-wrap{
+        width: 100%;
+        text-align: center;
+        .theme-switcher-lable{
+            display: inline-block;
+            cursor: pointer;
+            .switch-path{
+                width: 40px;
+                height: 20px;
+                border-radius: 10px;
+                background-color: #ccc;
+                .switch-handle{
+                    background-color: #999;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    transition: all 0.3s ease-in-out;
+                }
+            }
+            .theme-switcher{
+                // display: none;
+            }
+            &.active {
+                .switch-path{
+                    background-color: #555;
+                }
+                .switch-handle {
+                    transform: translateX(20px);
+                    background-color: #7bbb5e;
+                }
+            }
+        }
+    }*/
+}
+
+.content-box {
+  margin: 20px auto 0 auto;
+  background-color: #eee;
+  color: #181818;
+  border-radius: 8px;
+  padding: 30px 30px 40px 30px;
+}
+
+.content-box h3 {
+  text-align: center;
+  color: #181818;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+[data-theme="dark"] {
+  background-color: #181818;
+  color: #fff;
+}
+
+[data-theme="dark"] .content-box {
+  background-color: #333;
+  color: #eee;
+}
+
+[data-theme="dark"] .content-box h3 {
+  color: #7bbb5e;
+}
+
+[data-theme="dark"] .content-box p {
+  color: #fff;
+}
+
+[data-theme="dark"] .bg-light {
+  background-color: #333 !important;
+}
+
+[data-theme="dark"] .bg-light .navbar-brand {
+  color: #fff !important;
+}
+
+[data-theme="dark"] .navbar-light .navbar-nav .nav-link {
+  color: white !important;
+}
+
+[data-theme="dark"] .dropdown-menu {
+  background-color: #757373;
+}
+
+[data-theme="dark"] .dropdown-menu .custom-control-label {
+  color: #fff;
+}
+
+[data-theme="dark"] .modal-content {
+  background-color: #181818;
+}
+
+[data-theme="dark"] .modal-content .custom-control-label {
+  color: #fff;
+}
+
+[data-theme="dark"] .modal-header {
+  border-bottom: 1px solid #303030 !important;
+}
+
+[data-theme="dark"] .modal-header a .fa-times {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+}
+
+[data-theme="dark"] .modal-footer {
+  border-top: 1px solid #303030 !important;
+}
+
+.sing {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) !important;
+          transform: translate(-50%, -50%) !important;
+}
+
+.sing .modal-dialog {
+  max-width: 500px;
+  margin: 0 auto !important;
+}
+
+.sing .modal-content {
+  min-width: 500px !important;
+}
+
+.sing .modal-header a {
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+}
+
+.sing .modal-body .form-group {
+  position: relative;
+}
+
+.sing .modal-body .form-group #email, .sing .modal-body .form-group #password {
+  outline: none;
+  background: transparent;
+  border: none;
+  padding: 12px 15px;
+  padding-right: 50px;
+  color: #fff;
+  font-size: 18px;
+  border: 2px solid #131313;
+  background: -webkit-gradient(linear, left top, left bottom, from(#1e2024), to(#18181c));
+  background: linear-gradient(#1e2024, #18181c);
+  border-radius: 4px;
+}
+
+.sing .modal-body .form-group .indicator {
+  position: absolute;
+  top: 53px;
+  right: 12px;
+  width: 10px;
+  background: #555;
+  border-radius: 50%;
+  z-index: 9999;
+}
+#form.valid .indicator{
+  background: #0f0;
+  box-shadow: 0 0 5px #0f0,
+              0 0 10px #0f0,
+              0 0 20px #0f0,
+              0 0 40px #0f0;
+}
+#form.invalid .indicator{
+  background: #f00;
+  box-shadow: 0 0 5px #f00,
+              0 0 10px #f00,
+              0 0 20px #f00,
+              0 0 40px #f00;
+}
+.sing .modal-footer {
+  padding: 2px !important;
+}
+/*# sourceMappingURL=custom.css.map */

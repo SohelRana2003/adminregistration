@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Admin Dashboard</title>
+    <title>@yield('title')</title>
     <!-- Meta -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="{{ asset('assets\pages\chart\radial\css\radial.css') }}" type="text/css" media="all">
     <!-- feather Awesome -->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets\icon\feather\css\feather.css') }}">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets\icon\font-awesome\css\all.min.css') }}">
     <!-- Style.css -->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets\css\style.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets\css\jquery.mCustomScrollbar.css') }}">
@@ -77,7 +79,7 @@
                             <i class="feather icon-menu"></i>
                         </a>
                         <a href="index-1.htm">
-                            <img class="img-fluid" src="assets\images\logo.png" alt="Theme-Logo">
+                            <img class="img-fluid" src="../assets\images\logo.png" alt="Theme-Logo">
                         </a>
                         <a class="mobile-options">
                             <i class="feather icon-more-horizontal"></i>
@@ -115,7 +117,7 @@
                                         </li>
                                         <li>
                                             <div class="media">
-                                                <img class="d-flex align-self-center img-radius" src="assets\images\avatar-4.jpg" alt="Generic placeholder image">
+                                                <img class="d-flex align-self-center img-radius" src="../assets\images\avatar-4.jpg" alt="Generic placeholder image">
                                                 <div class="media-body">
                                                     <h5 class="notification-user">Soeng Souy</h5>
                                                     <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
@@ -125,7 +127,7 @@
                                         </li>
                                         <li>
                                             <div class="media">
-                                                <img class="d-flex align-self-center img-radius" src="assets\images\avatar-3.jpg" alt="Generic placeholder image">
+                                                <img class="d-flex align-self-center img-radius" src="../assets\images\avatar-3.jpg" alt="Generic placeholder image">
                                                 <div class="media-body">
                                                     <h5 class="notification-user">Joseph William</h5>
                                                     <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
@@ -135,7 +137,7 @@
                                         </li>
                                         <li>
                                             <div class="media">
-                                                <img class="d-flex align-self-center img-radius" src="assets\images\avatar-4.jpg" alt="Generic placeholder image">
+                                                <img class="d-flex align-self-center img-radius" src="../assets\images\avatar-4.jpg" alt="Generic placeholder image">
                                                 <div class="media-body">
                                                     <h5 class="notification-user">Sara Soudein</h5>
                                                     <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
@@ -149,8 +151,8 @@
                             <li class="user-profile header-notification">
                                 <div class="dropdown-primary dropdown">
                                     <div class="dropdown-toggle" data-toggle="dropdown">
-                                        <img src="assets\images\avatar-4.jpg" class="img-radius" alt="User-Profile-Image">
-                                        <span>Soeng Souy</span>
+                                        <img src="../assets\images\avatar-4.jpg" class="img-radius" alt="User-Profile-Image">
+                                        <span>Sohel Rana</span>
                                         <i class="feather icon-chevron-down"></i>
                                     </div>
                                     <ul class="show-notification profile-notification dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
@@ -175,7 +177,7 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="auth-normal-sign-in.htm">
+                                            <a href="{{ route('logout') }}">
                                                 <i class="feather icon-log-out"></i> Logout
                                             </a>
                                         </li>
@@ -191,7 +193,6 @@
                 <div class="pcoded-wrapper">
                     <nav class="pcoded-navbar">
                         <div class="pcoded-inner-navbar main-menu">
-                            <div class="pcoded-navigatio-lavel">Navigation</div>
                             <ul class="pcoded-item pcoded-left-item">
                                 <!-- <li class="pcoded-hasmenu active pcoded-trigger">
                                     <a href="javascript:void(0)">
@@ -199,8 +200,8 @@
                                         <span class="pcoded-mtext">Dashboard</span>
                                     </a>
                                 </li> -->
-                                <li  class="active">
-                                    <a href="#">
+                                <li  class="">
+                                    <a href="{{ route('admindashboard') }}">
                                         <span class="pcoded-micon"><i class="feather icon-home"></i></span>
                                         <span class="pcoded-mtext">Dashboard</span>
                                     </a>
@@ -208,80 +209,30 @@
                                 <li class="pcoded-hasmenu">
                                     <a href="javascript:void(0)">
                                         <span class="pcoded-micon"><i class="feather icon-sidebar"></i></span>
-                                        <span class="pcoded-mtext">Page layouts</span>
-                                        <span class="pcoded-badge label label-warning">NEW</span>
+                                        <span class="pcoded-mtext">Quiz</span>
                                     </a>
                                     <ul class="pcoded-submenu">
-                                        <li class=" pcoded-hasmenu">
-                                            <a href="javascript:void(0)">
-                                                <span class="pcoded-mtext">Vertical</span>
-                                            </a>
-                                            <ul class="pcoded-submenu">
-                                                <li class=" ">
-                                                    <a href="menu-static.htm">
-                                                        <span class="pcoded-mtext">Static Layout</span>
-                                                    </a>
-                                                </li>
-                                                <li class=" ">
-                                                    <a href="menu-header-fixed.htm">
-                                                        <span class="pcoded-mtext">Header Fixed</span>
-                                                    </a>
-                                                </li>
-                                                <li class=" ">
-                                                    <a href="menu-compact.htm">
-                                                        <span class="pcoded-mtext">Compact</span>
-                                                    </a>
-                                                </li>
-                                                <li class=" ">
-                                                    <a href="menu-sidebar.htm">
-                                                        <span class="pcoded-mtext">Sidebar Fixed</span>
-                                                    </a>
-                                                </li>
-
-                                            </ul>
-                                        </li>
-                                        <li class=" pcoded-hasmenu">
-                                            <a href="javascript:void(0)">
-                                                <span class="pcoded-mtext">Horizontal</span>
-                                            </a>
-                                            <ul class="pcoded-submenu">
-                                                <li class=" ">
-                                                    <a href="menu-horizontal-static.htm" target="_blank">
-                                                        <span class="pcoded-mtext">Static Layout</span>
-                                                    </a>
-                                                </li>
-                                                <li class=" ">
-                                                    <a href="menu-horizontal-fixed.htm" target="_blank">
-                                                        <span class="pcoded-mtext">Fixed layout</span>
-                                                    </a>
-                                                </li>
-                                                <li class=" ">
-                                                    <a href="menu-horizontal-icon.htm" target="_blank">
-                                                        <span class="pcoded-mtext">Static With Icon</span>
-                                                    </a>
-                                                </li>
-                                                <li class=" ">
-                                                    <a href="menu-horizontal-icon-fixed.htm" target="_blank">
-                                                        <span class="pcoded-mtext">Fixed With Icon</span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </li>
                                         <li class=" ">
-                                            <a href="menu-bottom.htm">
-                                                <span class="pcoded-mtext">Bottom Menu</span>
+                                            <a href="{{ route('allquiz') }}">
+                                                <span class="pcoded-mtext">All Quiz</span>
                                             </a>
                                         </li>
                                         <li class=" ">
-                                            <a href="box-layout.htm" target="_blank">
-                                                <span class="pcoded-mtext">Box Layout</span>
+                                            <a href="{{ route('addnew') }}">
+                                                <span class="pcoded-mtext">Add New Quiz</span>
+                                                <span class="pcoded-badge label label-warning">NEW</span>
                                             </a>
                                         </li>
-                                        <li class=" ">
-                                            <a href="menu-rtl.htm" target="_blank">
-                                                <span class="pcoded-mtext">RTL</span>
-                                            </a>
-                                        </li>
+{{--                                        <li class=" ">--}}
+{{--                                            <a href="{{ route('editquiz', ['id' => $quizzes->id]) }}">--}}
+{{--                                                <span class="pcoded-mtext">Edit Quiz</span>--}}
+{{--                                            </a>--}}
+{{--                                        </li>--}}
+{{--                                        <li class=" ">--}}
+{{--                                            <a href="menu-rtl.htm">--}}
+{{--                                                <span class="pcoded-mtext">Delete Quiz</span>--}}
+{{--                                            </a>--}}
+{{--                                        </li>--}}
                                     </ul>
                                 </li>
                                 <li class="">
@@ -1599,12 +1550,13 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-    gtag('config', 'UA-23581568-13');
+        gtag('config', 'UA-23581568-13');
     </script>
+
 </body>
 
 </html>

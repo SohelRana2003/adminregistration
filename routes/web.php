@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('user.home');
 });
 
 //Admin Login Backend Route
@@ -23,3 +23,24 @@ Route::get('/admin', 'AdminController@Index')->name('adminbackend');
 //Admin Login Route
 Route::post('/admin-login', 'AdminController@Adminlogin')->name('adminlogin');
 Route::get('/admin-dashboard', 'AdminController@Admindashboard')->name('admindashboard');
+
+//Admin Logout
+Route::get('/logout', 'AdminController@logout')->name('logout');
+
+//Quiz curd
+Route::get('/all-quiz', 'QuizController@index')->name('allquiz');
+
+Route::get('/add-new', 'QuizController@create')->name('addnew');
+
+Route::post('/save-quiz', 'QuizController@store')->name('savequiz');
+
+Route::get('/edit-quiz/{id}', 'QuizController@edit')->name('editquiz');
+
+Route::post('/update-quiz/{id}', 'QuizController@update')->name('updatequiz');
+
+Route::post('/destroy-quiz', 'QuizController@destroy')->name('destroyquiz');
+
+
+
+//Quiz==========================================================================
+Route::get('/quiz', 'QuizController@quiz')->name('quiz');

@@ -12,6 +12,7 @@ class AdminController extends Controller
 {
     //Admin Login Form
     public function Index() {
+
         return view('admin.adminlogin');
     }
 
@@ -44,6 +45,14 @@ class AdminController extends Controller
     //Admin Dashboard
     public function Admindashboard() {
         return view('admin.dashboard');
+    }
+
+    //Admin Dashboard Logout
+    public function logout() {
+        session::put('email', null);
+        session::put('id', null);
+
+        return Redirect::to('/admin');
     }
 
 }
